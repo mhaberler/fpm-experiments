@@ -11,11 +11,13 @@ see https://github.com/jordansissel/fpm
 
 inspiration from: https://github.com/jordansissel/fpm/wiki/PackageSimpleFiles
 
-# test package
-see the Makefile - to build a simple deb: make package
+# build test package
+see the Makefile - to build a simple deb: 
+
+  `make package`
 
 the debian version is set via 'git rev-list --count --first-parent HEAD' which derives
-an increasing serial from git history
+an increasing serial from git history, so the `0.5` seen below will vary
 
 # inspect results
 
