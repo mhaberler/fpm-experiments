@@ -29,7 +29,15 @@ SITE=http://static.mah.priv.at/jenkins/testdir/quartus/
 FPM_OPTS= \
 	--verbose \
 	--license 'GNU General Public License (GPL), version 2.0 or later' \
-	--architecture all
+	--architecture all \
+	--before-install preinstall.sh \
+	--after-install  postinstall.sh \
+	--before-remove preremove.sh \
+	--after-remove postremove.sh
+
+
+#--after-upgrade
+#--before-upgrade
 
 .PHONY: package
 package:
