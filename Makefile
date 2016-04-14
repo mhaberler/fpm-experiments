@@ -31,15 +31,18 @@ ARCHITECTURE=all
 LICENSE='GNU General Public License (GPL), version 2.0 or later'
 
 # example dependency, can be met, does exist
-PRE_DEPENDS=--deb-pre-depends gcc
+#PRE_DEPENDS=--deb-pre-depends gcc
 # cannot be met, 4.99 does not exist
 #PRE_DEPENDS=--deb-pre-depends 'gcc (>= 4:4.99)'
 
-DESCRIPTION="--description 'FPGA binary for <repo> <commit> <sourcefile>'"
-URL="--url http://foo.com/bar"
+DESCRIPTION=--description 'FPGA binary for <repo> <commit> <sourcefile>'
+URL=--url 'http://foo.com/bar'
+
 FPM_OPTS= \
 	--maintainer $(MAINTAINER) \
 	$(PRE_DEPENDS) \
+	$(DESCRIPTION) \
+	$(URL) \
 	--verbose \
 	--license $(LICENSE) \
 	--architecture $(ARCHITECTURE) \
