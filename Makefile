@@ -35,8 +35,8 @@ LICENSE='GNU General Public License (GPL), version 2.0 or later'
 # cannot be met, 4.99 does not exist
 #PRE_DEPENDS=--deb-pre-depends 'gcc (>= 4:4.99)'
 
-DESCRIPTION=--description 'FPGA binary for <repo> <commit> <sourcefile>'
-URL=--url 'http://foo.com/bar'
+DESCRIPTION=--description 'FPGA binary built from https://github.com/machinekit/mksocfpga DE0'
+#URL=--url 'http://foo.com/bar'
 
 FPM_OPTS= \
 	--maintainer $(MAINTAINER) \
@@ -46,13 +46,14 @@ FPM_OPTS= \
 	--verbose \
 	--license $(LICENSE) \
 	--architecture $(ARCHITECTURE) \
-	--before-install preinstall.sh \
-	--after-install  postinstall.sh \
-	--before-remove preremove.sh \
-	--after-remove postremove.sh \
-	--before-upgrade preupgrade.sh \
-	--after-upgrade postupgrade.sh \
 
+#	--before-install preinstall.sh \
+#	--after-install  postinstall.sh \
+#	--before-remove preremove.sh \
+#	--after-remove postremove.sh \
+#	--before-upgrade preupgrade.sh \
+#	--after-upgrade postupgrade.sh \
+#
 
 all: clean package
 
