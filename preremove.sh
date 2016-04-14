@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-echo hi, I'm the preremove script
+echo "hi, I'm the preremove script"

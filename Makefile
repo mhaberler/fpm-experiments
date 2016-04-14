@@ -26,18 +26,29 @@ INSTALLDIR=/lib/firmware/socfpga
 RBF=soc_system.rbf
 SITE=http://static.mah.priv.at/jenkins/testdir/quartus/
 
+MAINTAINER=git@mah.priv.at
+ARCHITECTURE=all
+LICENSE='GNU General Public License (GPL), version 2.0 or later'
+# can be met, does exist
+#PRE_DEPENDS=--deb-pre-dependsgcc
+# cannot be met, 4.99 does not exist
+#PRE_DEPENDS=--deb-pre-depends 'gcc > 4:4.99'
+
 FPM_OPTS= \
+	--maintainer $(MAINTAINER) \
+	$(PRE_DEPENDS) \
 	--verbose \
-	--license 'GNU General Public License (GPL), version 2.0 or later' \
-	--architecture all \
+	--license $(LICENSE) \
+	--architecture $(ARCHITECTURE) \
 	--before-install preinstall.sh \
 	--after-install  postinstall.sh \
 	--before-remove preremove.sh \
-	--after-remove postremove.sh
+	--after-remove postremove.sh \
+	--before-upgrade preupgrade.sh \
+	--after-upgrade postupgrade.sh \
 
 
-#--after-upgrade
-#--before-upgrade
+all: clean package
 
 .PHONY: package
 package:
