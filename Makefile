@@ -70,5 +70,5 @@ clean:
 	rm -f *.deb
 
 add:
-	sudo -u freight freight add socfpga-rbf_$(PKG_VERSION)_all.deb  apt/jessie/socfpga
-	sudo -u freight freight cache
+	freight add socfpga-rbf_$(PKG_VERSION)_all.deb  apt/jessie/socfpga
+	freight cache
