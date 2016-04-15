@@ -52,3 +52,5 @@ foo/lib/firmware
 foo/lib/firmware/socfpga
 foo/lib/firmware/socfpga/soc_system.rbf
 ````
+
+
