@@ -1,3 +1,5 @@
+[![Build Status](https://jenkins.stiwoll.mah.priv.at/job/fpm-freight-test/badge/icon)](https://jenkins.stiwoll.mah.priv.at/job/fpm-freight-test/)
+
 # fpm-experiments
 idiot-proof debian packaging with fpm, so the right thing for me
 
